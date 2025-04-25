@@ -2,7 +2,7 @@ name: Smart Campus Template Message
 
 protocols:
   - type: mqtt
-    host: localhost
+    host: emqx
     port: 1883
     topic: smartCampus/test
     clientId: c03d5156
