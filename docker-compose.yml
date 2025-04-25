@@ -131,10 +131,11 @@ services:
   grafana:
     image: "grafana/grafana:11.5.0"
     container_name: grafana
+    user: "$UID:$GID"
     ports:
       - "3000:3000"
     volumes:
-      - ./data/grafana:/var/lib/grafana
+      - '$PWD/data/grafana:/var/lib/grafana'
     networks:
       - iot_campus_uis
     depends_on:
